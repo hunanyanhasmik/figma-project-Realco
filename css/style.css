@@ -1,0 +1,1474 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url(../fonts/Roboto-Bold.ttf);
+}
+body {
+  font-family: "Roboto";
+  font-weight: 400;
+}
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+nav {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.0784313725);
+}
+nav .nav-message {
+  width: 100%;
+  padding: 10px 0;
+  background: #939878;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+nav .nav-message span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+nav .nav-message span.close-icon {
+  position: absolute;
+  right: 40px;
+}
+nav .nav-message span.close-icon svg {
+  width: 32px;
+  height: 32px;
+}
+@media screen and (max-width: 479px) {
+  nav .nav-message {
+    width: 320px;
+  }
+  nav .nav-message span {
+    font-size: 12px;
+  }
+  nav .nav-message span.close-icon {
+    right: 16px;
+  }
+  nav .nav-message span.close-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+nav .container .navigation {
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .container .navigation .logo svg {
+  width: 105px;
+  height: 32px;
+}
+nav .container .navigation .mobile__menu__btn {
+  display: none;
+}
+nav .container .navigation .mobile__menu__btn .burger {
+  display: flex;
+  width: 35px;
+  height: 30px;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+nav .container .navigation .mobile__menu__btn .burger span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #2A2C1F;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+nav .container .navigation .mobile__menu__btn .burger span:first-child {
+  transform-origin: 0% 0%;
+}
+nav .container .navigation .mobile__menu__btn .burger span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+nav .container .navigation .nav__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+nav .container .navigation .nav__items .nav__menu {
+  display: flex;
+  list-style-type: none;
+  gap: 32px;
+}
+nav .container .navigation .nav__items .nav__menu a {
+  display: block;
+  position: relative;
+  font-size: 16px;
+  color: #2A2C1F;
+  text-decoration: none;
+  transition: 0.3s;
+}
+nav .container .navigation .nav__items .nav__menu a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 20px;
+  left: 50%;
+  right: 50%;
+  height: 1.8px;
+  background: #2A2C1F;
+  transition: 0.5s;
+}
+nav .container .navigation .nav__items .nav__menu a.icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+nav .container .navigation .nav__items .nav__menu a:hover::before {
+  left: 0;
+  right: 0;
+}
+nav .container .navigation .nav__items .nav__btns {
+  display: flex;
+  gap: 16px;
+}
+nav .container .navigation .nav__items .nav__btns button {
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 9px 26px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+nav .container .navigation .nav__items .nav__btns button .nav__btns__logo {
+  display: none;
+}
+nav .container .navigation .nav__items .nav__btns button#cart {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #E7E8E3;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0784313725);
+  background: #FFFFFF;
+  transition: 0.3s;
+}
+nav .container .navigation .nav__items .nav__btns button#cart svg {
+  width: 14px;
+  height: 24px;
+  fill: #2A2C1F;
+  transition: 0.3s;
+}
+nav .container .navigation .nav__items .nav__btns button#cart:hover {
+  color: #FFFFFF;
+  background: #CF6F49;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2509803922));
+  border: 1px solid #CF6F49;
+}
+nav .container .navigation .nav__items .nav__btns button#cart:hover svg {
+  fill: #FFFFFF;
+}
+nav .container .navigation .nav__items .nav__btns button#find {
+  color: #FFFFFF;
+  border: 0;
+  background: #CF6F49;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2509803922));
+  transition: 0.3s;
+}
+nav .container .navigation .nav__items .nav__btns button#find svg {
+  width: 18px;
+  height: 15px;
+}
+nav .container .navigation .nav__items .nav__btns button#find:hover {
+  color: #2A2C1F;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0784313725);
+  background: transparent;
+}
+@media screen and (max-width: 1279px) {
+  nav .container {
+    width: 1024px;
+  }
+  nav .container .navigation {
+    padding: 16px;
+  }
+  nav .container .navigation .nav__items .nav__menu a {
+    font-size: 14px;
+  }
+  nav .container .navigation .nav__items .nav__btns button {
+    padding: 5px 17px;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  nav .container {
+    width: 768px;
+  }
+  nav .container .navigation .logo {
+    width: 31%;
+  }
+  nav .container .navigation .mobile__menu__btn {
+    width: 31%;
+    display: block;
+  }
+  nav .container .navigation .nav__items .nav__menu {
+    display: none;
+  }
+  nav .container .navigation .nav__items .nav__btns {
+    gap: 8px;
+  }
+  nav .container .navigation .nav__items .nav__btns button {
+    padding: 5px 15px;
+  }
+  nav .container .navigation .nav__items .nav__btns button span {
+    display: none;
+  }
+  nav .container .navigation .nav__items .nav__btns button .nav__btns__logo {
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  nav .container {
+    width: 576px;
+  }
+}
+@media screen and (max-width: 575px) {
+  nav .container {
+    width: 480px;
+  }
+  nav .container .navigation .logo svg {
+    width: 90px;
+  }
+  nav .container .navigation .nav__items .nav__btns button {
+    padding: 2px 10px;
+  }
+  nav .container .navigation .nav__items .nav__btns button#cart svg {
+    width: 12px;
+    height: 22px;
+    fill: #2A2C1F;
+    transition: 0.3s;
+  }
+  nav .container .navigation .nav__items .nav__btns button#find svg {
+    width: 15px;
+    height: 13px;
+  }
+}
+@media screen and (max-width: 479px) {
+  nav .container {
+    width: 320px;
+  }
+  nav .container .navigation .mobile__menu__btn {
+    width: 21%;
+  }
+}
+
+.search-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+.search-section .left-item {
+  width: 50%;
+  position: relative;
+  background: #F5F5F2;
+  padding: 160px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-section .left-item .top-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.search-section .left-item .top-svg svg {
+  width: 135px;
+  height: 147px;
+}
+.search-section .left-item .bottom-svg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.search-section .left-item .bottom-svg svg {
+  width: 135px;
+  height: 135px;
+}
+.search-section .left-item .section-content {
+  max-width: 560px;
+  padding-right: 64px;
+}
+.search-section .left-item .section-content .section-content__button {
+  font-size: 14px;
+  line-height: 21px;
+  padding: 4px 12px;
+  border: 0;
+  border-radius: 32px;
+  background: #E7E8E3;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.search-section .left-item .section-content .section-content__button:hover {
+  background: #cccec7;
+}
+.search-section .left-item .section-content .section-content__title {
+  font-size: 56px;
+  line-height: 67px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  margin: 21px 0;
+}
+.search-section .left-item .section-content .section-content__info {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #65665c;
+  margin-bottom: 21px;
+}
+.search-section .left-item .section-content .search-form .search-form__content .search-form__input {
+  width: 310px;
+  height: 48px;
+  text-indent: 10px;
+  background: #FFFFFF;
+  border-radius: 6px;
+  border: 1px solid #E7E8E3;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0784313725);
+  outline: 0;
+}
+.search-section .left-item .section-content .search-form .search-form__content .search-form__button {
+  padding: 8px 18px 11px;
+  color: #FFFFFF;
+  border: 0;
+  border-radius: 6px;
+  background: #CF6F49;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2509803922));
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.search-section .left-item .section-content .search-form .search-form__content .search-form__button:hover {
+  color: #2A2C1F;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0784313725);
+  background: #FFFFFF;
+}
+@media screen and (max-width: 1024px) {
+  .search-section .left-item {
+    width: 50%;
+  }
+  .search-section .left-item .top-svg svg {
+    width: 93px;
+    height: 104px;
+  }
+  .search-section .left-item .bottom-svg {
+    max-height: 114px;
+  }
+  .search-section .left-item .bottom-svg svg {
+    width: 93px;
+    bottom: 120px;
+  }
+  .search-section .left-item .section-content .section-content__title {
+    font-size: 37px;
+    line-height: 40px;
+  }
+  .search-section .left-item .section-content .section-content__info {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .search-section .left-item .section-content .search-form .search-form__content .search-form__input {
+    margin-bottom: 16px;
+  }
+  .search-section .left-item .section-content .search-form .search-form__content .search-form__button {
+    padding: 5px 11px 8px;
+    font-size: 15px;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .search-section .left-item {
+    width: 100%;
+    padding: 80px;
+    text-align: center;
+  }
+  .search-section .left-item .top-svg svg {
+    width: 92px;
+    height: 100px;
+  }
+  .search-section .left-item .bottom-svg {
+    max-height: 100px;
+  }
+  .search-section .left-item .bottom-svg svg {
+    width: 100px;
+    height: 100px;
+  }
+  .search-section .left-item .section-content {
+    padding-right: 0;
+  }
+  .search-section .left-item .section-content .section-content__title {
+    font-size: 38px;
+    line-height: 55px;
+  }
+  .search-section .left-item .section-content .section-content__info {
+    font-size: 15px;
+  }
+  .search-section .left-item .section-content .search-form .search-form__content .search-form__input {
+    margin-bottom: 20px;
+  }
+  .search-section .left-item .section-content .search-form .search-form__content .search-form__button {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .search-section .left-item {
+    width: 480px;
+  }
+  .search-section .left-item .section-content .section-content__title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .search-section .left-item .section-content .section-content__info {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .search-section .left-item .section-content .search-form .search-form__content .search-form__input {
+    margin-bottom: 20px;
+  }
+  .search-section .left-item .section-content .search-form .search-form__content .search-form__button {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .search-section .left-item {
+    width: 320px;
+  }
+  .search-section .left-item .top-svg svg {
+    width: 60px;
+    height: 67px;
+  }
+  .search-section .left-item .bottom-svg {
+    max-height: 60px;
+  }
+  .search-section .left-item .bottom-svg svg {
+    width: 60px;
+    height: 60px;
+  }
+  .search-section .left-item .section-content .section-content__button {
+    font-size: 11px;
+  }
+  .search-section .left-item .section-content .section-content__title {
+    font-size: 19px;
+    line-height: 28px;
+  }
+  .search-section .left-item .section-content .section-content__info {
+    font-size: 12px;
+    line-height: 19px;
+  }
+  .search-section .left-item .section-content .search-form .search-form__content .search-form__input {
+    width: 265px;
+    height: 40px;
+  }
+  .search-section .left-item .section-content .search-form .search-form__content .search-form__button {
+    font-size: 12px;
+    padding: 1px 17px 3px;
+  }
+}
+.search-section .right-item {
+  width: 50%;
+  min-height: 686px;
+  background: url("../img/right-item.jpg") no-repeat 50% 50%/cover;
+}
+@media screen and (max-width: 1024px) {
+  .search-section .right-item {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .search-section .right-item {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .search-section .right-item {
+    width: 480px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .search-section .right-item {
+    width: 320px;
+    min-height: 320px;
+  }
+}
+
+.magazines .container .magazines-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 64px;
+}
+.magazines .container .magazines-content .magazines-content__left-item {
+  width: 19%;
+}
+.magazines .container .magazines-content .magazines-content__left-item span {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #2A2C1F;
+}
+.magazines .container .magazines-content .magazines-content__right-item {
+  width: 61%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.magazines .container .magazines-content .magazines-content__right-item a {
+  text-decoration: none;
+}
+.magazines .container .magazines-content .magazines-content__right-item a svg {
+  width: 120px;
+}
+@media screen and (max-width: 1279px) {
+  .magazines .container {
+    width: 1024px;
+  }
+  .magazines .container .magazines-content {
+    padding: 64px 30px 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .magazines .container {
+    width: 768px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .magazines .container {
+    width: 576px;
+  }
+  .magazines .container .magazines-content {
+    gap: 32px;
+    text-align: center;
+  }
+  .magazines .container .magazines-content .magazines-content__left-item,
+  .magazines .container .magazines-content .magazines-content__right-item {
+    width: 100%;
+  }
+  .magazines .container .magazines-content .magazines-content__right-item {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .magazines .container {
+    width: 480px;
+  }
+  .magazines .container .magazines-content .magazines-content__left-item span {
+    font-size: 15px;
+  }
+  .magazines .container .magazines-content .magazines-content__right-item {
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .magazines .container {
+    width: 320px;
+  }
+  .magazines .container .magazines-content .magazines-content__right-item a svg {
+    width: 95px;
+  }
+}
+
+.works .container .works__content {
+  padding: 128px 0;
+  text-align: center;
+}
+.works .container .works__content .works__content__title {
+  font-family: "Roboto-Bold";
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  margin-bottom: 24px;
+  color: #2A2C1F;
+}
+.works .container .works__content .works__content__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #65665C;
+  margin-bottom: 61px;
+}
+.works .container .works__content .works__content__items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.works .container .works__content .works__content__items .works__content__item {
+  box-sizing: border-box;
+  padding: 48px 32px;
+  width: 31.3333%;
+  border: 1px solid #E7E8E3;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0784313725);
+  border-radius: 16px;
+  gap: 24px;
+}
+.works .container .works__content .works__content__items .works__content__item .works__content__item-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FAE8E1;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+.works .container .works__content .works__content__items .works__content__item .works__content__item-info {
+  padding-top: 24px;
+}
+.works .container .works__content .works__content__items .works__content__item .works__content__item-info h4 {
+  font-family: "Roboto-Bold";
+  font-size: 24px;
+  line-height: 34px;
+  color: #2A2C1F;
+  margin-bottom: 16px;
+}
+.works .container .works__content .works__content__items .works__content__item .works__content__item-info p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: #65665C;
+}
+@media screen and (max-width: 1279px) {
+  .works .container {
+    width: 1024px;
+  }
+  .works .container .works__content {
+    padding: 128px 32px;
+  }
+  .works .container .works__content .works__content__title {
+    font-size: 42px;
+  }
+  .works .container .works__content .works__content__text {
+    font-size: 17px;
+    margin-bottom: 40px;
+  }
+  .works .container .works__content .works__content__items .works__content__item {
+    padding: 32px 16px;
+  }
+  .works .container .works__content .works__content__items .works__content__item .works__content__item-info {
+    font-size: 24px;
+    line-height: 34px;
+  }
+  .works .container .works__content .works__content__items .works__content__item .works__content__item-info p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .works .container {
+    width: 768px;
+  }
+  .works .container .works__content .works__content__title {
+    font-size: 38px;
+    line-height: 36px;
+  }
+  .works .container .works__content .works__content__text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .works .container .works__content .works__content__items .works__content__item .works__content__item-info h4 {
+    font-size: 20px;
+  }
+  .works .container .works__content .works__content__items .works__content__item .works__content__item-info p {
+    font-size: 11px;
+    line-height: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .works .container {
+    width: 576px;
+  }
+  .works .container .works__content .works__content__text {
+    font-size: 12px;
+  }
+  .works .container .works__content .works__content__items {
+    gap: 32px;
+  }
+  .works .container .works__content .works__content__items .works__content__item {
+    width: 46%;
+  }
+  .works .container .works__content .works__content__items .works__content__item:last-child {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .works .container {
+    width: 480px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .works .container {
+    width: 320px;
+  }
+  .works .container .works__content .works__content__title {
+    font-size: 34px;
+  }
+  .works .container .works__content .works__content__items .works__content__item {
+    width: 100%;
+  }
+}
+
+.best-houses .container .best-houses__content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.best-houses .container .best-houses__content .best-houses__left-item {
+  width: 600px;
+  padding: 140px 80px 140px 0;
+}
+.best-houses .container .best-houses__content .best-houses__left-item .best-houses__button {
+  font-size: 14px;
+  line-height: 21px;
+  padding: 4px 12px;
+  border: 0;
+  border-radius: 32px;
+  background: #E7E8E3;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.best-houses .container .best-houses__content .best-houses__left-item .best-houses__button:hover {
+  background: #cccec7;
+}
+.best-houses .container .best-houses__content .best-houses__left-item .best-houses__title {
+  font-family: "Roboto-Bold";
+  font-size: 48px;
+  line-height: 58px;
+  color: #2A2C1F;
+}
+.best-houses .container .best-houses__content .best-houses__left-item .best-houses__info {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #65665C;
+  margin-bottom: 21px;
+}
+.best-houses .container .best-houses__content .best-houses__left-item .best-houses__btns {
+  padding-top: 24px;
+  display: flex;
+  gap: 24px;
+}
+.best-houses .container .best-houses__content .best-houses__left-item .best-houses__btns .best-houses__btn {
+  padding: 13px 25px;
+  background: #FFFFFF;
+  border: 1px solid #E7E8E3;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0784313725);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.best-houses .container .best-houses__content .best-houses__left-item .best-houses__btns .best-houses__btn:hover {
+  background: #CF6F49;
+  color: #FFFFFF;
+}
+.best-houses .container .best-houses__content .best-houses__left-item .best-houses__btns .best-houses__link {
+  background: transparent;
+  border: 0;
+}
+.best-houses .container .best-houses__content .best-houses__left-item .best-houses__btns .best-houses__link a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #2A2C1F;
+  gap: 12px;
+}
+.best-houses .container .best-houses__content .best-houses__left-item .best-houses__btns .best-houses__link a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 20px;
+  left: 50%;
+  right: 50%;
+  height: 1.8px;
+  background: #2A2C1F;
+  transition: 0.5s;
+}
+.best-houses .container .best-houses__content .best-houses__left-item .best-houses__btns .best-houses__link a.icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.best-houses .container .best-houses__content .best-houses__left-item .best-houses__btns .best-houses__link a:hover::before {
+  left: 0;
+  right: 0;
+}
+.best-houses .container .best-houses__content .best-houses__right-item {
+  width: 600px;
+  height: 600px;
+  border-radius: 16px;
+  background: url("../img/best-houses.jpg") no-repeat 50% 50%/cover;
+}
+@media screen and (max-width: 1279px) {
+  .best-houses .container {
+    width: 1024px;
+  }
+  .best-houses .container .best-houses__content {
+    padding: 128px 32px 0;
+  }
+  .best-houses .container .best-houses__content .best-houses__left-item .best-houses__title {
+    font-size: 37px;
+    line-height: 48px;
+  }
+  .best-houses .container .best-houses__content .best-houses__left-item .best-houses__info {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .best-houses .container {
+    width: 768px;
+  }
+  .best-houses .container .best-houses__content {
+    padding-top: 16px;
+    gap: 32px;
+  }
+  .best-houses .container .best-houses__content .best-houses__left-item {
+    width: 100%;
+    padding: 0 30px;
+  }
+  .best-houses .container .best-houses__content .best-houses__right-item {
+    width: 100%;
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .best-houses .container {
+    width: 576px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .best-houses .container {
+    width: 480px;
+  }
+  .best-houses .container .best-houses__content .best-houses__left-item .best-houses__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .best-houses .container .best-houses__content .best-houses__left-item .best-houses__info {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .best-houses .container .best-houses__content .best-houses__left-item .best-houses__btns .best-houses__btn {
+    padding: 13px 20px;
+    font-size: 12px;
+  }
+  .best-houses .container .best-houses__content .best-houses__left-item .best-houses__btns .best-houses__link a {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .best-houses .container {
+    width: 320px;
+  }
+  .best-houses .container .best-houses__content .best-houses__left-item {
+    text-align: center;
+  }
+  .best-houses .container .best-houses__content .best-houses__left-item .best-houses__title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .best-houses .container .best-houses__content .best-houses__left-item .best-houses__info {
+    font-size: 11px;
+    line-height: 15px;
+  }
+  .best-houses .container .best-houses__content .best-houses__left-item .best-houses__btns {
+    padding-top: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .best-houses .container .best-houses__content .best-houses__left-item .best-houses__btns .best-houses__btn {
+    padding: 13px 20px;
+    font-size: 12px;
+  }
+  .best-houses .container .best-houses__content .best-houses__left-item .best-houses__btns .best-houses__link a {
+    font-size: 14px;
+  }
+}
+
+.forward-process .container .forward-process__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  padding-top: 128px;
+}
+.forward-process .container .forward-process__content .forward-process__right-item {
+  width: 600px;
+  padding: 55px 80px 55px 0;
+}
+.forward-process .container .forward-process__content .forward-process__right-item .forward-process__button {
+  font-size: 14px;
+  line-height: 21px;
+  padding: 4px 12px;
+  border: 0;
+  border-radius: 32px;
+  background: #E7E8E3;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.forward-process .container .forward-process__content .forward-process__right-item .forward-process__button:hover {
+  background: #cccec7;
+}
+.forward-process .container .forward-process__content .forward-process__right-item .forward-process__title {
+  font-family: "Roboto-Bold";
+  font-size: 48px;
+  line-height: 58px;
+  color: #2A2C1F;
+}
+.forward-process .container .forward-process__content .forward-process__right-item .forward-process__info {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #65665C;
+  margin-bottom: 28px;
+}
+.forward-process .container .forward-process__content .forward-process__right-item .affordable-prices {
+  display: flex;
+  gap: 24px;
+}
+.forward-process .container .forward-process__content .forward-process__right-item .affordable-prices .affordable-prices__item .affordable-prices__item-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FAE8E1;
+  border-radius: 8px;
+}
+.forward-process .container .forward-process__content .forward-process__right-item .affordable-prices .affordable-prices__item .affordable-prices__item-info {
+  padding-top: 24px;
+}
+.forward-process .container .forward-process__content .forward-process__right-item .affordable-prices .affordable-prices__item .affordable-prices__item-info h4 {
+  font-family: "Roboto-Bold";
+  font-size: 24px;
+  line-height: 34px;
+  color: #2A2C1F;
+  margin-bottom: 16px;
+}
+.forward-process .container .forward-process__content .forward-process__right-item .affordable-prices .affordable-prices__item .affordable-prices__item-info p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: #65665C;
+}
+.forward-process .container .forward-process__content .forward-process__right-item .forward-process__btns {
+  padding-top: 24px;
+  display: flex;
+  gap: 24px;
+}
+.forward-process .container .forward-process__content .forward-process__right-item .forward-process__btns .forward-process__btn {
+  padding: 13px 25px;
+  background: #FFFFFF;
+  border: 1px solid #E7E8E3;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0784313725);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.forward-process .container .forward-process__content .forward-process__right-item .forward-process__btns .forward-process__btn:hover {
+  background: #CF6F49;
+  color: #FFFFFF;
+}
+.forward-process .container .forward-process__content .forward-process__right-item .forward-process__btns .forward-process__link {
+  background: transparent;
+  border: 0;
+}
+.forward-process .container .forward-process__content .forward-process__right-item .forward-process__btns .forward-process__link a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #2A2C1F;
+  gap: 12px;
+}
+.forward-process .container .forward-process__content .forward-process__right-item .forward-process__btns .forward-process__link a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 20px;
+  left: 50%;
+  right: 50%;
+  height: 1.8px;
+  background: #2A2C1F;
+  transition: 0.5s;
+}
+.forward-process .container .forward-process__content .forward-process__right-item .forward-process__btns .forward-process__link a.icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.forward-process .container .forward-process__content .forward-process__right-item .forward-process__btns .forward-process__link a:hover::before {
+  left: 0;
+  right: 0;
+}
+.forward-process .container .forward-process__content .forward-process__left-item {
+  width: 600px;
+  height: 600px;
+  border-radius: 16px;
+  background: url("../img/forward-process.jpg") no-repeat 50% 50%/cover;
+}
+@media screen and (max-width: 1279px) {
+  .forward-process .container {
+    width: 1024px;
+  }
+  .forward-process .container .forward-process__content {
+    padding: 128px 32px 0;
+  }
+  .forward-process .container .forward-process__content .forward-process__right-item .forward-process__title {
+    font-size: 37px;
+    line-height: 48px;
+  }
+  .forward-process .container .forward-process__content .forward-process__right-item .forward-process__info {
+    font-size: 15px;
+  }
+  .forward-process .container .forward-process__content .forward-process__right-item .affordable-prices .affordable-prices__item .affordable-prices__item-info h4 {
+    font-size: 19px;
+    line-height: 22px;
+  }
+  .forward-process .container .forward-process__content .forward-process__right-item .affordable-prices .affordable-prices__item .affordable-prices__item-info p {
+    font-size: 13px;
+    line-height: 19px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .forward-process .container {
+    width: 768px;
+  }
+  .forward-process .container .forward-process__content {
+    gap: 32px;
+  }
+  .forward-process .container .forward-process__content .forward-process__left-item {
+    width: 100%;
+    padding: 0 30px;
+    order: 2;
+  }
+  .forward-process .container .forward-process__content .forward-process__right-item {
+    width: 100%;
+    padding: 0 30px;
+    order: 1;
+  }
+}
+@media screen and (max-width: 768px) {
+  .forward-process .container {
+    width: 576px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .forward-process .container {
+    width: 480px;
+  }
+  .forward-process .container .forward-process__content .forward-process__right-item .forward-process__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .forward-process .container .forward-process__content .forward-process__right-item .forward-process__info {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .forward-process .container .forward-process__content .forward-process__right-item .forward-process__btns .forward-process__btn {
+    padding: 13px 20px;
+    font-size: 12px;
+  }
+  .forward-process .container .forward-process__content .forward-process__right-item .forward-process__btns .forward-process__link a {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .forward-process .container {
+    width: 320px;
+  }
+  .forward-process .container .forward-process__content .forward-process__right-item {
+    text-align: center;
+  }
+  .forward-process .container .forward-process__content .forward-process__right-item .forward-process__title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .forward-process .container .forward-process__content .forward-process__right-item .forward-process__info {
+    font-size: 11px;
+    line-height: 15px;
+  }
+  .forward-process .container .forward-process__content .forward-process__right-item .affordable-prices {
+    flex-wrap: wrap;
+  }
+  .forward-process .container .forward-process__content .forward-process__right-item .affordable-prices .affordable-prices__item {
+    width: 100%;
+  }
+  .forward-process .container .forward-process__content .forward-process__right-item .affordable-prices .affordable-prices__item .affordable-prices__item-icon {
+    margin: 0 auto;
+  }
+  .forward-process .container .forward-process__content .forward-process__right-item .forward-process__btns {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Sections
+       ========================================================================== */
+/**
+     * Remove the margin in all browsers.
+     */
+body {
+  margin: 0;
+}
+
+/**
+     * Render the `main` element consistently in IE.
+     */
+main {
+  display: block;
+}
+
+/**
+     * Correct the font size and margin on `h1` elements within `section` and
+     * `article` contexts in Chrome, Firefox, and Safari.
+     */
+h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* Grouping content
+       ========================================================================== */
+/**
+     * 1. Add the correct box sizing in Firefox.
+     * 2. Show the overflow in Edge and IE.
+     */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+       ========================================================================== */
+/**
+     * Remove the gray background on active links in IE 10.
+     */
+a {
+  background-color: transparent;
+}
+
+/**
+     * 1. Remove the bottom border in Chrome 57-
+     * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+     */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+     * Add the correct font weight in Chrome, Edge, and Safari.
+     */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+     * Add the correct font size in all browsers.
+     */
+small {
+  font-size: 80%;
+}
+
+/**
+     * Prevent `sub` and `sup` elements from affecting the line height in
+     * all browsers.
+     */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+       ========================================================================== */
+/**
+     * Remove the border on images inside links in IE 10.
+     */
+img {
+  border-style: none;
+}
+
+/* Forms
+       ========================================================================== */
+/**
+     * 1. Change the font styles in all browsers.
+     * 2. Remove the margin in Firefox and Safari.
+     */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+     * Show the overflow in IE.
+     * 1. Show the overflow in Edge.
+     */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+     * Remove the inheritance of text transform in Edge, Firefox, and IE.
+     * 1. Remove the inheritance of text transform in Firefox.
+     */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+     * Correct the inability to style clickable types in iOS and Safari.
+     */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+     * Remove the inner border and padding in Firefox.
+     */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+     * Restore the focus styles unset by the previous rule.
+     */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+     * Correct the padding in Firefox.
+     */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+     * 1. Correct the text wrapping in Edge and IE.
+     * 2. Correct the color inheritance from `fieldset` elements in IE.
+     * 3. Remove the padding so developers are not caught out when they zero out
+     *    `fieldset` elements in all browsers.
+     */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+     * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+     */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+     * Remove the default vertical scrollbar in IE 10+.
+     */
+textarea {
+  overflow: auto;
+}
+
+/**
+     * 1. Add the correct box sizing in IE 10.
+     * 2. Remove the padding in IE 10.
+     */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+     * Correct the cursor style of increment and decrement buttons in Chrome.
+     */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+     * 1. Correct the odd appearance in Chrome and Safari.
+     * 2. Correct the outline style in Safari.
+     */
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+     * Remove the inner padding in Chrome and Safari on macOS.
+     */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+     * 1. Correct the inability to style clickable types in iOS and Safari.
+     * 2. Change font properties to `inherit` in Safari.
+     */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+       ========================================================================== */
+/*
+     * Add the correct display in Edge, IE 10+, and Firefox.
+     */
+details {
+  display: block;
+}
+
+/*
+     * Add the correct display in all browsers.
+     */
+summary {
+  display: list-item;
+}
+
+/* Misc
+       ========================================================================== */
+/**
+     * Add the correct display in IE 10+.
+     */
+template {
+  display: none;
+}
+
+/**
+     * Add the correct display in IE 10.
+     */
+[hidden] {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
